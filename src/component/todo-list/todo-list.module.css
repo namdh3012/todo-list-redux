@@ -1,0 +1,14 @@
+.inputSearch {
+  top: 0px;
+}
+
+.input {
+  width: 550px;
+}
+
+.taskList {
+  height: 792px;
+  flex-direction: row;
+  display: inline-block;
+  overflow: auto;
+}

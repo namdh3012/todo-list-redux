@@ -1,0 +1,106 @@
+.container {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  padding: 40px;
+}
+.input {
+  width: calc(100% - 8px);
+}
+
+.textArea {
+  width: 100% !important;
+  max-height: 384px;
+  min-height: 20px;
+  height: 128px;
+  padding: 2px;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+
+/* .textArea::-webkit-resizer {
+  background-image: url(../../assets/img-text-area.svg);
+} */
+
+.textArea:focus,
+.select:focus,
+.customInputCalendar:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.label {
+  margin-top: 20px;
+  height: 22px;
+  font-weight: bold;
+  font-size: 12px;
+  align-items: left;
+  text-align: left;
+}
+
+.buttonAdd {
+  height: 24px;
+  width: 100%;
+  background: #5cb85c;
+  margin-top: 64px;
+}
+
+.inlineBlock {
+  height: 72px;
+  width: 220px;
+  display: inline-block;
+}
+
+.select {
+  height: 32px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 0px;
+}
+
+.error {
+  border-color: red !important;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+.customInputCalendar {
+  width: 200px;
+  height: 32px;
+  padding: 0;
+  padding-left: 4px;
+  background: transparent;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+}
+
+.valueCustomInput {
+  display: flex;
+  width: 160px;
+  font-size: 14px;
+}
+
+.picker {
+  width: calc(100% + 6px);
+  height: 74px;
+  display: flex;
+}
+
+.icon {
+  border-left: 1px solid #000;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  height: 24px;
+  width: 24px;
+}

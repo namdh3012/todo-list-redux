@@ -1,0 +1,53 @@
+.todo {
+  width: 562px;
+  height: 62px;
+  border: 1px solid #000;
+  border-radius: 0;
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkBox {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskName {
+  width: 280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow-x: auto;
+}
+
+.groupButton {
+  width: 238px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  height: 24px;
+  width: 82px;
+}
+
+.blue {
+  background: #00bcd4;
+}
+
+.red {
+  background: #d9534f;
+  margin-left: 24px;
+}
+
+.detail {
+  height: 460px;
+  width: 564px;
+}

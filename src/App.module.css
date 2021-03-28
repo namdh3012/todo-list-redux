@@ -1,0 +1,37 @@
+.app {
+  text-align: center;
+  overflow: hidden;
+}
+
+.appHeader {
+  height: 100vh;
+  width: 100vw;
+}
+
+.createTaskArea {
+  height: 100%;
+  width: 520px;
+  border-left: 1px solid #333;
+  padding: 20px;
+  flex-direction: row;
+  display: inline-block;
+}
+
+.taskListArea {
+  height: 100%;
+  width: 692px;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  padding: 20px;
+  flex-direction: row;
+  display: inline-block;
+}
+
+.alignCenter {
+  width: 100%;
+  display: table-cell;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 40px;
+}
