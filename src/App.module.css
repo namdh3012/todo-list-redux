@@ -8,6 +8,11 @@
   width: 100vw;
 }
 
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .createTaskArea {
   height: 100%;
   width: 520px;

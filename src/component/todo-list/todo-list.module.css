@@ -7,7 +7,7 @@
 }
 
 .taskList {
-  height: 792px;
+  height: 760px;
   flex-direction: row;
   display: inline-block;
   overflow: auto;
