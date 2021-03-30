@@ -7,13 +7,15 @@ export const store = configureStore({
   },
 });
 
+
+
 // const persistedState = localStorage.getItem("reduxState")
 //   ? JSON.parse(localStorage.getItem("reduxState") || "{}")
 //   : {};
 
-// store.subscribe(() => {
-//   localStorage.setItem("reduxState", JSON.stringify(store.getState()));
-// });
+store.subscribe(() => {
+  localStorage.setItem("user", JSON.stringify(store.getState().todo));
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
@@ -22,3 +24,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+
