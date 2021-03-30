@@ -22,7 +22,7 @@ export const todoSlice = createSlice({
       const todoNew = action.payload;
       todoNew.id = uuid();
       state.todoList.push(todoNew);
-      state.todoList = state.todoList.sort(function (todo1, todo2) {
+      state.todoList.sort(function (todo1, todo2) {
         return (todo1.dueDate ?? 0) - (todo2.dueDate ?? 0);
       });
     },
@@ -34,7 +34,7 @@ export const todoSlice = createSlice({
       state.todoList.splice(index, 1);
     },
     showDetails: (state, action: PayloadAction<string>) => {
-      state.todoList.map((todo) => {
+      state.todoList.forEach((todo) => {
         if (todo.id === action.payload) {
           if (todo.isShowDetail === false) {
             todo.isShowDetail = true;
@@ -47,7 +47,7 @@ export const todoSlice = createSlice({
     },
     search: (state, action: PayloadAction<string>) => {
       const containText = new RegExp(`.*${action.payload}.*`, "i");
-      state.todoList.map((todo) => {
+      state.todoList.forEach((todo) => {
         if (action.payload === "" || containText.test(todo.title + "")) {
           todo.isVisible = true;
           return todo;
@@ -57,22 +57,14 @@ export const todoSlice = createSlice({
       });
     },
     check: (state, action: PayloadAction<string>) => {
-      state.todoList.map((todo) => {
-        if (todo.id === action.payload) {
-          if (todo.isChecked === true) {
-            todo.isChecked = false;
-          } else {
-            todo.isChecked = true;
-          }
-        }
-        return todo;
-      });
+      const index = findTodoIndexById(action.payload ?? "", state.todoList);
+      state.todoList[index].isChecked = !state.todoList[index].isChecked;
     },
     update: (state, action: PayloadAction<TodoEntity>) => {
       const index = findTodoIndexById(action.payload.id ?? "", state.todoList);
       action.payload.isShowDetail = false;
       state.todoList[index] = action.payload;
-      state.todoList = state.todoList.sort(function (todo1, todo2) {
+      state.todoList.sort(function (todo1, todo2) {
         return (todo1.dueDate ?? 0) - (todo2.dueDate ?? 0);
       });
     },
